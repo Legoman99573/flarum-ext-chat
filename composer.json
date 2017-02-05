@@ -1,5 +1,5 @@
 {
-    "name": "Legoman99573/flarum-ext-chat",
+    "name": "legoman99573/flarum-ext-chat",
     "description": "Realtime chat.",
     "keywords": ["chat", "flarum", "pushedx", "push-edx"],
     "type": "flarum-extension",
