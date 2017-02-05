@@ -275,13 +275,13 @@ System.register('pushedx/realtime-chat/components/ChatFrame', ['flarum/Component
                             //onmousemove: this.flagDrag.bind(this),
                             //onmouseup: this.flagUp.bind(this),
                             onclick: this.chatClick.bind(this, ctrl)
-                        }, [m('div', { id: 'chat-header', onclick: this.toggle.bind(this, ctrl) }, [m('h2', 'PushEdx Chat'), m('p', {
-                            'data-title': ctrl.isMuted ? 'Habilitar sonidos' : 'Deshabilitar sonidos'
+                        }, [m('div', { id: 'chat-header', onclick: this.toggle.bind(this, ctrl) }, [m('h2', 'Chat'), m('p', {
+                            'data-title': ctrl.isMuted ? 'Enable Sounds' : 'Disable Sounds'
                         }, [m('img', {
                             src: ctrl.isMuted ? soundMuted : soundNormal,
                             onclick: this.toggleSound.bind(this, ctrl)
                         })]), m('p', {
-                            'data-title': ctrl.notify ? 'Deshabilitar notificaciones' : 'Habilitar notificaciones'
+                            'data-title': ctrl.notify ? 'Enable Notifications' : 'Disable Notifications'
                         }, [m('img', {
                             src: ctrl.notify ? notifyNormal : notifyDisabled,
                             onclick: this.toggleNotifications.bind(this, ctrl)
@@ -297,7 +297,7 @@ System.register('pushedx/realtime-chat/components/ChatFrame', ['flarum/Component
                             className: this.reachedLimit(ctrl) ? 'reaching-limit' : '',
                             maxlength: maxLength,
                             disabled: !app.forum.attribute('canPostChat'),
-                            placeholder: app.forum.attribute('canPostChat') ? '' : 'Solo los usuarios registrados pueden usar el chat',
+                            placeholder: app.forum.attribute('canPostChat') ? '' : 'You do not have permission to chat.',
                             onkeyup: this.process.bind(this, ctrl),
                             onkeydown: this.checkLimit.bind(this, ctrl),
                             config: this.refocus.bind(this, ctrl)
