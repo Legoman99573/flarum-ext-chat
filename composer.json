@@ -4,7 +4,7 @@
     "keywords": ["chat", "flarum", "pushedx", "push-edx"],
     "type": "flarum-extension",
     "repository":{ 
-        "url":"https://packagist.org/api/update-package?username=Legoman99573&apiToken=n-OXJrI_MxYnmW2AeqF6"
+        "url":"https://github.com/Legoman99573/flarum-ext-chat"
     },
     "license": "MIT",
     "authors": [
