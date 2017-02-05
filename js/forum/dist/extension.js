@@ -264,7 +264,7 @@ System.register('pushedx/realtime-chat/components/ChatFrame', ['flarum/Component
                             this.forwardMessage(ctrl, args.forward[i], false);
                         }
 
-                        return m('div', { className: 'chat left container ' + ('hidden' : ctrl.beingShown ? '') }, [m('div', {
+                        return m('div', { className: 'chat left container ' + (ctrl.beingShown ? 'hidden' : '') }, [m('div', {
                             tabindex: 0,
                             className: 'frame',
                             id: 'chat',
