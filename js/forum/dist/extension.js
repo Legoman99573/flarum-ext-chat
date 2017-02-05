@@ -67,7 +67,7 @@ System.register('pushedx/realtime-chat/components/ChatFrame', ['flarum/Component
                             lastClick: 0,
                             scrollInfo: scrollInfo,
                             oldlength: 0,
-                            beingShown: showStatus === null ? true : JSON.parse(showStatus),
+                            beingShown: showStatus === null ? false : JSON.parse(showStatus),
                             isMuted: isMuted === null ? true : JSON.parse(isMuted),
                             notify: notify === null ? false : JSON.parse(notify),
 
@@ -511,14 +511,14 @@ System.register('pushedx/realtime-chat/main', ['flarum/extend', 'flarum/componen
                  * Add the upload button to the post composer.
                  */
                 extend(HeaderPrimary.prototype, 'items', function (items) {
-                    //var chatFrame = new ChatFrame();
-                    //var realView = chatFrame.view;
-                    /*
+                    var chatFrame = new ChatFrame();
+                    var realView = chatFrame.view;
+                    
                     chatFrame.view = () => {
                         return realView.call(chatFrame);
                     };
-                    */
-                    //status.forwardMessage = chatFrame.forwardMessage.bind(chatFrame);
+                    
+                    status.forwardMessage = chatFrame.forwardMessage.bind(chatFrame);
                     var forwarded = forward.slice(0);
                     items.add('pushedx-chat-frame', m.component(new ChatFrame(), { forward: forwarded }));
                     forward.splice(0, forward.length);
